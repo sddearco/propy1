@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
 <style>
   body {
     background-image: url("https://cdn.pixabay.com/photo/2017/05/31/23/44/email-marketing-2362038_960_720.png");
@@ -146,7 +147,7 @@
 <script src="https://adminlte.io/themes/v3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="https://adminlte.io/themes/v3/dist/js/adminlte.js"></script>
 <script src="https://adminlte.io/themes/v3/dist/js/pages/dashboard.js"></script>
-
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 <script>
   function cambioPassword(){
 
@@ -188,6 +189,7 @@
     success : function(r) {
               r="<center class='alert alert-info'><strong>Correos Enviados</strong></center>"+r;
              $("#d_enviados").html(r)
+             $("#t_historial2").DataTable();
     },
     error : function(xhr, status) {
         alert('Error intente en otro momento');
@@ -202,6 +204,7 @@ $.ajax({
   success : function(r) {
             r="<center class='alert alert-info'><strong>Correos Recibidos</strong></center>"+r;
            $("#d_recibidos").html(r)
+           $("#t_historial1").DataTable();
   },
   error : function(xhr, status) {
       alert('Error intente en otro momento');

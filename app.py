@@ -121,13 +121,13 @@ def activarUsuario():
 @app.route("/HistorialEnviados",methods=["GET","POST"])
 def HistorialEnviados():
     resultado=controlador.ver_enviados(email_origen)
-    return render_template("respuesta.html",datas=resultado)
+    return render_template("respuestaenviados.html",datas=resultado)
 
 
 @app.route("/HistorialRecibidos",methods=["GET","POST"])
 def HistorialRecibidos():
     resultado=controlador.ver_recibidos(email_origen)
-    return render_template("respuesta.html",datas=resultado)
+    return render_template("respuestarecibidos.html",datas=resultado)
 
 
 

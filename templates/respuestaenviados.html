@@ -1,5 +1,6 @@
 
-<table class='table table-striped table-hover table-bordered'>
+<table id="t_historial2" name= "t_historial2" class='table table-striped table-hover table-bordered'>
+    <thead>
     <tr>
         <th>Fecha</th>
         <th>Hora</th>
@@ -7,7 +8,8 @@
         <th>Asunto</th>
         <th>Mensaje</th>
     </tr>
-
+</head>
+<tbody>
     {% for m in datas %}
     <tr>
         <td>{{ m['fecha'] }}</td>
@@ -20,5 +22,5 @@
     {% endfor %}
 
     
-
+</tbody>
 </table>
